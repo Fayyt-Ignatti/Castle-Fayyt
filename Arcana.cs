@@ -2,7 +2,7 @@
 
 namespace Castle_Fayyt
 {
-  class Arcana
+  internal class Arcana
   {
     public static RandomAttackPool<int> MagicPool = new RandomAttackPool<int>();
     public static bool Lvl1Instantiated = false;
@@ -39,9 +39,9 @@ namespace Castle_Fayyt
 
           if (RandomPulledInternal == 0)
           {
-            Console.ForegroundColor = ConsoleColor.Green; Console.Write("\n\n\tYou Healed "); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(Heal.Lvl1Full); Console.ForegroundColor = ConsoleColor.Green; Console.Write(" hit points."); Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.Green; Console.Write("\n\n\tYou Healed "); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(HealLookup.GetHealValueFull(1)); Console.ForegroundColor = ConsoleColor.Green; Console.Write(" hit points."); Console.ResetColor();
 
-            Fight.HeroHP += Heal.Lvl1Full;
+            Fight.HeroHP += HealLookup.GetHealValueFull(1);
 
             if (Fight.HeroHP > Fight.HeroHPMax)
             {
@@ -52,12 +52,11 @@ namespace Castle_Fayyt
 
             return 0;
           }
-
           else if (RandomPulledInternal == 1)
           {
-            Console.ForegroundColor = ConsoleColor.Green; Console.Write("\n\n\tYou Healed "); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(Heal.Lvl1Half); Console.ForegroundColor = ConsoleColor.Green; Console.Write(" hit points."); Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.Green; Console.Write("\n\n\tYou Healed "); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(HealLookup.GetHealValueHalf(1)); Console.ForegroundColor = ConsoleColor.Green; Console.Write(" hit points."); Console.ResetColor();
 
-            Fight.HeroHP += Heal.Lvl1Half;
+            Fight.HeroHP += HealLookup.GetHealValueHalf(1);
 
             if (Fight.HeroHP > Fight.HeroHPMax)
             {
@@ -68,7 +67,6 @@ namespace Castle_Fayyt
 
             return 0;
           }
-
           else if (RandomPulledInternal == 7)
           {
             Console.ForegroundColor = ConsoleColor.Yellow; Console.Write("\n\n\tCritical Arcana!  "); Console.ForegroundColor = ConsoleColor.Magenta; Console.Write(RandomPulledInternal); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(" damage!"); Console.ResetColor();
@@ -96,9 +94,9 @@ namespace Castle_Fayyt
 
           if (RandomPulledInternal == 0)
           {
-            Console.ForegroundColor = ConsoleColor.Green; Console.Write("\n\n\tYou Healed "); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(Heal.Lvl2Full); Console.ForegroundColor = ConsoleColor.Green; Console.Write(" hit points."); Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.Green; Console.Write("\n\n\tYou Healed "); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(HealLookup.GetHealValueFull(2)); Console.ForegroundColor = ConsoleColor.Green; Console.Write(" hit points."); Console.ResetColor();
 
-            Fight.HeroHP += Heal.Lvl2Full;
+            Fight.HeroHP += HealLookup.GetHealValueFull(2);
 
             if (Fight.HeroHP > Fight.HeroHPMax)
             {
@@ -109,12 +107,11 @@ namespace Castle_Fayyt
 
             return 0;
           }
-
           else if (RandomPulledInternal == 1)
           {
-            Console.ForegroundColor = ConsoleColor.Green; Console.Write("\n\n\tYou Healed "); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(Heal.Lvl2Half); Console.ForegroundColor = ConsoleColor.Green; Console.Write(" hit points."); Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.Green; Console.Write("\n\n\tYou Healed "); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(HealLookup.GetHealValueHalf(2)); Console.ForegroundColor = ConsoleColor.Green; Console.Write(" hit points."); Console.ResetColor();
 
-            Fight.HeroHP += Heal.Lvl2Half;
+            Fight.HeroHP += HealLookup.GetHealValueHalf(2);
 
             if (Fight.HeroHP > Fight.HeroHPMax)
             {
@@ -125,7 +122,6 @@ namespace Castle_Fayyt
 
             return 0;
           }
-
           else if (RandomPulledInternal == 11)
           {
             Console.ForegroundColor = ConsoleColor.Yellow; Console.Write("\n\n\tCritical Arcana!  "); Console.ForegroundColor = ConsoleColor.Magenta; Console.Write(RandomPulledInternal); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(" damage!"); Console.ResetColor();
@@ -153,9 +149,9 @@ namespace Castle_Fayyt
 
           if (RandomPulledInternal == 0)
           {
-            Console.ForegroundColor = ConsoleColor.Green; Console.Write("\n\n\tYou Healed "); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(Heal.Lvl3Full); Console.ForegroundColor = ConsoleColor.Green; Console.Write(" hit points."); Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.Green; Console.Write("\n\n\tYou Healed "); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(HealLookup.GetHealValueFull(3)); Console.ForegroundColor = ConsoleColor.Green; Console.Write(" hit points."); Console.ResetColor();
 
-            Fight.HeroHP += Heal.Lvl3Full;
+            Fight.HeroHP += HealLookup.GetHealValueFull(3);
 
             if (Fight.HeroHP > Fight.HeroHPMax)
             {
@@ -166,12 +162,11 @@ namespace Castle_Fayyt
 
             return 0;
           }
-
           else if (RandomPulledInternal == 1)
           {
-            Console.ForegroundColor = ConsoleColor.Green; Console.Write("\n\n\tYou Healed "); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(Heal.Lvl3Half); Console.ForegroundColor = ConsoleColor.Green; Console.Write(" hit points."); Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.Green; Console.Write("\n\n\tYou Healed "); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(HealLookup.GetHealValueHalf(3)); Console.ForegroundColor = ConsoleColor.Green; Console.Write(" hit points."); Console.ResetColor();
 
-            Fight.HeroHP += Heal.Lvl3Half;
+            Fight.HeroHP += HealLookup.GetHealValueHalf(3);
 
             if (Fight.HeroHP > Fight.HeroHPMax)
             {
@@ -182,7 +177,6 @@ namespace Castle_Fayyt
 
             return 0;
           }
-
           else if (RandomPulledInternal == 15)
           {
             Console.ForegroundColor = ConsoleColor.Yellow; Console.Write("\n\n\tCritical Arcana!  "); Console.ForegroundColor = ConsoleColor.Magenta; Console.Write(RandomPulledInternal); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(" damage!"); Console.ResetColor();
@@ -210,9 +204,9 @@ namespace Castle_Fayyt
 
           if (RandomPulledInternal == 0)
           {
-            Console.ForegroundColor = ConsoleColor.Green; Console.Write("\n\n\tYou Healed "); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(Heal.Lvl4Full); Console.ForegroundColor = ConsoleColor.Green; Console.Write(" hit points."); Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.Green; Console.Write("\n\n\tYou Healed "); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(HealLookup.GetHealValueFull(4)); Console.ForegroundColor = ConsoleColor.Green; Console.Write(" hit points."); Console.ResetColor();
 
-            Fight.HeroHP += Heal.Lvl4Full;
+            Fight.HeroHP += HealLookup.GetHealValueFull(4);
 
             if (Fight.HeroHP > Fight.HeroHPMax)
             {
@@ -223,12 +217,11 @@ namespace Castle_Fayyt
 
             return 0;
           }
-
           else if (RandomPulledInternal == 1)
           {
-            Console.ForegroundColor = ConsoleColor.Green; Console.Write("\n\n\tYou Healed "); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(Heal.Lvl4Half); Console.ForegroundColor = ConsoleColor.Green; Console.Write(" hit points."); Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.Green; Console.Write("\n\n\tYou Healed "); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(HealLookup.GetHealValueHalf(4)); Console.ForegroundColor = ConsoleColor.Green; Console.Write(" hit points."); Console.ResetColor();
 
-            Fight.HeroHP += Heal.Lvl4Half;
+            Fight.HeroHP += HealLookup.GetHealValueHalf(4);
 
             if (Fight.HeroHP > Fight.HeroHPMax)
             {
@@ -239,7 +232,6 @@ namespace Castle_Fayyt
 
             return 0;
           }
-
           else if (RandomPulledInternal == 19)
           {
             Console.ForegroundColor = ConsoleColor.Yellow; Console.Write("\n\n\tCritical Arcana!  "); Console.ForegroundColor = ConsoleColor.Magenta; Console.Write(RandomPulledInternal); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(" damage!"); Console.ResetColor();
@@ -267,9 +259,9 @@ namespace Castle_Fayyt
 
           if (RandomPulledInternal == 0)
           {
-            Console.ForegroundColor = ConsoleColor.Green; Console.Write("\n\n\tYou Healed "); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(Heal.Lvl5Full); Console.ForegroundColor = ConsoleColor.Green; Console.Write(" hit points."); Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.Green; Console.Write("\n\n\tYou Healed "); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(HealLookup.GetHealValueFull(5)); Console.ForegroundColor = ConsoleColor.Green; Console.Write(" hit points."); Console.ResetColor();
 
-            Fight.HeroHP += Heal.Lvl5Full;
+            Fight.HeroHP += HealLookup.GetHealValueFull(5);
 
             if (Fight.HeroHP > Fight.HeroHPMax)
             {
@@ -280,12 +272,11 @@ namespace Castle_Fayyt
 
             return 0;
           }
-
           else if (RandomPulledInternal == 1)
           {
-            Console.ForegroundColor = ConsoleColor.Green; Console.Write("\n\n\tYou Healed "); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(Heal.Lvl5Half); Console.ForegroundColor = ConsoleColor.Green; Console.Write(" hit points."); Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.Green; Console.Write("\n\n\tYou Healed "); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(HealLookup.GetHealValueHalf(5)); Console.ForegroundColor = ConsoleColor.Green; Console.Write(" hit points."); Console.ResetColor();
 
-            Fight.HeroHP += Heal.Lvl5Half;
+            Fight.HeroHP += HealLookup.GetHealValueHalf(5);
 
             if (Fight.HeroHP > Fight.HeroHPMax)
             {
@@ -296,7 +287,6 @@ namespace Castle_Fayyt
 
             return 0;
           }
-
           else if (RandomPulledInternal == 22)
           {
             Console.ForegroundColor = ConsoleColor.Yellow; Console.Write("\n\n\tCritical Arcana!  "); Console.ForegroundColor = ConsoleColor.Magenta; Console.Write(RandomPulledInternal); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(" damage!"); Console.ResetColor();
@@ -324,9 +314,9 @@ namespace Castle_Fayyt
 
           if (RandomPulledInternal == 0)
           {
-            Console.ForegroundColor = ConsoleColor.Green; Console.Write("\n\n\tYou Healed "); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(Heal.Lvl6Full); Console.ForegroundColor = ConsoleColor.Green; Console.Write(" hit points."); Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.Green; Console.Write("\n\n\tYou Healed "); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(HealLookup.GetHealValueFull(6)); Console.ForegroundColor = ConsoleColor.Green; Console.Write(" hit points."); Console.ResetColor();
 
-            Fight.HeroHP += Heal.Lvl6Full;
+            Fight.HeroHP += HealLookup.GetHealValueFull(6);
 
             if (Fight.HeroHP > Fight.HeroHPMax)
             {
@@ -337,12 +327,11 @@ namespace Castle_Fayyt
 
             return 0;
           }
-
           else if (RandomPulledInternal == 1)
           {
-            Console.ForegroundColor = ConsoleColor.Green; Console.Write("\n\n\tYou Healed "); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(Heal.Lvl6Half); Console.ForegroundColor = ConsoleColor.Green; Console.Write(" hit points."); Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.Green; Console.Write("\n\n\tYou Healed "); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(HealLookup.GetHealValueHalf(6)); Console.ForegroundColor = ConsoleColor.Green; Console.Write(" hit points."); Console.ResetColor();
 
-            Fight.HeroHP += Heal.Lvl6Half;
+            Fight.HeroHP += HealLookup.GetHealValueHalf(6);
 
             if (Fight.HeroHP > Fight.HeroHPMax)
             {
@@ -353,7 +342,6 @@ namespace Castle_Fayyt
 
             return 0;
           }
-
           else if (RandomPulledInternal == 24)
           {
             Console.ForegroundColor = ConsoleColor.Yellow; Console.Write("\n\n\tCritical Arcana!  "); Console.ForegroundColor = ConsoleColor.Magenta; Console.Write(RandomPulledInternal); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(" damage!"); Console.ResetColor();
@@ -382,9 +370,9 @@ namespace Castle_Fayyt
 
           if (RandomPulledInternal == 0)
           {
-            Console.ForegroundColor = ConsoleColor.Green; Console.Write("\n\n\tYou Healed "); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(Heal.Lvl7Full); Console.ForegroundColor = ConsoleColor.Green; Console.Write(" hit points."); Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.Green; Console.Write("\n\n\tYou Healed "); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(HealLookup.GetHealValueFull(7)); Console.ForegroundColor = ConsoleColor.Green; Console.Write(" hit points."); Console.ResetColor();
 
-            Fight.HeroHP += Heal.Lvl7Full;
+            Fight.HeroHP += HealLookup.GetHealValueFull(7);
 
             if (Fight.HeroHP > Fight.HeroHPMax)
             {
@@ -395,12 +383,11 @@ namespace Castle_Fayyt
 
             return 0;
           }
-
           else if (RandomPulledInternal == 1)
           {
-            Console.ForegroundColor = ConsoleColor.Green; Console.Write("\n\n\tYou Healed "); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(Heal.Lvl7Half); Console.ForegroundColor = ConsoleColor.Green; Console.Write(" hit points."); Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.Green; Console.Write("\n\n\tYou Healed "); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(HealLookup.GetHealValueHalf(7)); Console.ForegroundColor = ConsoleColor.Green; Console.Write(" hit points."); Console.ResetColor();
 
-            Fight.HeroHP += Heal.Lvl7Half;
+            Fight.HeroHP += HealLookup.GetHealValueHalf(7);
 
             if (Fight.HeroHP > Fight.HeroHPMax)
             {
@@ -411,7 +398,6 @@ namespace Castle_Fayyt
 
             return 0;
           }
-
           else if (RandomPulledInternal == 28)
           {
             Console.ForegroundColor = ConsoleColor.Yellow; Console.Write("\n\n\tCritical Arcana!  "); Console.ForegroundColor = ConsoleColor.Magenta; Console.Write(RandomPulledInternal); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(" damage!"); Console.ResetColor();
@@ -440,9 +426,9 @@ namespace Castle_Fayyt
 
           if (RandomPulledInternal == 0)
           {
-            Console.ForegroundColor = ConsoleColor.Green; Console.Write("\n\n\tYou Healed "); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(Heal.Lvl8Full); Console.ForegroundColor = ConsoleColor.Green; Console.Write(" hit points."); Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.Green; Console.Write("\n\n\tYou Healed "); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(HealLookup.GetHealValueFull(8)); Console.ForegroundColor = ConsoleColor.Green; Console.Write(" hit points."); Console.ResetColor();
 
-            Fight.HeroHP += Heal.Lvl8Full;
+            Fight.HeroHP += HealLookup.GetHealValueFull(8);
 
             if (Fight.HeroHP > Fight.HeroHPMax)
             {
@@ -453,12 +439,11 @@ namespace Castle_Fayyt
 
             return 0;
           }
-
           else if (RandomPulledInternal == 1)
           {
-            Console.ForegroundColor = ConsoleColor.Green; Console.Write("\n\n\tYou Healed "); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(Heal.Lvl8Half); Console.ForegroundColor = ConsoleColor.Green; Console.Write(" hit points."); Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.Green; Console.Write("\n\n\tYou Healed "); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(HealLookup.GetHealValueHalf(8)); Console.ForegroundColor = ConsoleColor.Green; Console.Write(" hit points."); Console.ResetColor();
 
-            Fight.HeroHP += Heal.Lvl8Half;
+            Fight.HeroHP += HealLookup.GetHealValueHalf(8);
 
             if (Fight.HeroHP > Fight.HeroHPMax)
             {
@@ -469,7 +454,6 @@ namespace Castle_Fayyt
 
             return 0;
           }
-
           else if (RandomPulledInternal == 30)
           {
             Console.ForegroundColor = ConsoleColor.Yellow; Console.Write("\n\n\tCritical Arcana!  "); Console.ForegroundColor = ConsoleColor.Magenta; Console.Write(RandomPulledInternal); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(" damage!"); Console.ResetColor();
@@ -500,9 +484,9 @@ namespace Castle_Fayyt
 
           if (RandomPulledInternal == 0)
           {
-            Console.ForegroundColor = ConsoleColor.Green; Console.Write("\n\n\tYou Healed "); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(Heal.Lvl9Full); Console.ForegroundColor = ConsoleColor.Green; Console.Write(" hit points."); Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.Green; Console.Write("\n\n\tYou Healed "); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(HealLookup.GetHealValueFull(9)); Console.ForegroundColor = ConsoleColor.Green; Console.Write(" hit points."); Console.ResetColor();
 
-            Fight.HeroHP += Heal.Lvl9Full;
+            Fight.HeroHP += HealLookup.GetHealValueFull(9);
 
             if (Fight.HeroHP > Fight.HeroHPMax)
             {
@@ -513,12 +497,11 @@ namespace Castle_Fayyt
 
             return 0;
           }
-
           else if (RandomPulledInternal == 1)
           {
-            Console.ForegroundColor = ConsoleColor.Green; Console.Write("\n\n\tYou Healed "); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(Heal.Lvl9Half); Console.ForegroundColor = ConsoleColor.Green; Console.Write(" hit points."); Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.Green; Console.Write("\n\n\tYou Healed "); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(HealLookup.GetHealValueHalf(9)); Console.ForegroundColor = ConsoleColor.Green; Console.Write(" hit points."); Console.ResetColor();
 
-            Fight.HeroHP += Heal.Lvl9Half;
+            Fight.HeroHP += HealLookup.GetHealValueHalf(9);
 
             if (Fight.HeroHP > Fight.HeroHPMax)
             {
@@ -529,7 +512,6 @@ namespace Castle_Fayyt
 
             return 0;
           }
-
           else if (RandomPulledInternal == 34)
           {
             Console.ForegroundColor = ConsoleColor.Yellow; Console.Write("\n\n\tCritical Arcana!  "); Console.ForegroundColor = ConsoleColor.Magenta; Console.Write(RandomPulledInternal); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(" damage!"); Console.ResetColor();
@@ -561,9 +543,9 @@ namespace Castle_Fayyt
 
           if (RandomPulledInternal == 0)
           {
-            Console.ForegroundColor = ConsoleColor.Green; Console.Write("\n\n\tYou Healed "); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(Heal.Lvl10Full); Console.ForegroundColor = ConsoleColor.Green; Console.Write(" hit points."); Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.Green; Console.Write("\n\n\tYou Healed "); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(HealLookup.GetHealValueFull(10)); Console.ForegroundColor = ConsoleColor.Green; Console.Write(" hit points."); Console.ResetColor();
 
-            Fight.HeroHP += Heal.Lvl10Full;
+            Fight.HeroHP += HealLookup.GetHealValueFull(10);
 
             if (Fight.HeroHP > Fight.HeroHPMax)
             {
@@ -574,12 +556,11 @@ namespace Castle_Fayyt
 
             return 0;
           }
-
           else if (RandomPulledInternal == 1)
           {
-            Console.ForegroundColor = ConsoleColor.Green; Console.Write("\n\n\tYou Healed "); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(Heal.Lvl10Half); Console.ForegroundColor = ConsoleColor.Green; Console.Write(" hit points."); Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.Green; Console.Write("\n\n\tYou Healed "); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(HealLookup.GetHealValueHalf(10)); Console.ForegroundColor = ConsoleColor.Green; Console.Write(" hit points."); Console.ResetColor();
 
-            Fight.HeroHP += Heal.Lvl10Half;
+            Fight.HeroHP += HealLookup.GetHealValueHalf(10);
 
             if (Fight.HeroHP > Fight.HeroHPMax)
             {
@@ -590,7 +571,6 @@ namespace Castle_Fayyt
 
             return 0;
           }
-
           else if (RandomPulledInternal == 38)
           {
             Console.ForegroundColor = ConsoleColor.Yellow; Console.Write("\n\n\tCritical Arcana!  "); Console.ForegroundColor = ConsoleColor.Magenta; Console.Write(RandomPulledInternal); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(" damage!"); Console.ResetColor();
@@ -598,10 +578,10 @@ namespace Castle_Fayyt
           }
           Console.ForegroundColor = ConsoleColor.Magenta; Console.Write("\n\nYour coruscating blaze did "); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(RandomPulledInternal); Console.ForegroundColor = ConsoleColor.Magenta; Console.Write(" damage."); Console.ResetColor();
           return RandomPulledInternal;
+
         default:
           return 0;
       }
     }
   }
 }
-
