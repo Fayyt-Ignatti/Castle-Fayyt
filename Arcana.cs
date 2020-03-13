@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Castle_Fayyt.RNG;
+using System;
 
 namespace Castle_Fayyt
 {
   internal class Arcana
   {
-    public static RandomAttackPool<int> MagicPool = new RandomAttackPool<int>();
+    public static RandomBag<int> MagicPool = new RandomBag<int>();
     public static bool Lvl1Instantiated = false;
     public static bool Lvl2Instantiated = false;
     public static bool Lvl3Instantiated = false;
@@ -23,15 +24,9 @@ namespace Castle_Fayyt
         case 1:
           if (Lvl1Instantiated == false)
           {
-            RandomAttackPool<int> Magic1 = new RandomAttackPool<int>();
-            Magic1.AddEntry(0, 10);
-            Magic1.AddEntry(1, 10);
-            Magic1.AddEntry(2, 18);
-            Magic1.AddEntry(3, 32);
-            Magic1.AddEntry(4, 24);
-            Magic1.AddEntry(7, 6);
+            var magic1 = new RandomBag<int>((0, 10), (1, 10), (2, 18), (3, 32), (4, 24), (7, 6));
 
-            MagicPool = Magic1;
+            MagicPool = magic1;
             Lvl1Instantiated = true;
           }
 
@@ -78,15 +73,9 @@ namespace Castle_Fayyt
         case 2:
           if (Lvl2Instantiated == false)
           {
-            RandomAttackPool<int> Magic2 = new RandomAttackPool<int>();
-            Magic2.AddEntry(0, 10);
-            Magic2.AddEntry(1, 10);
-            Magic2.AddEntry(4, 20);
-            Magic2.AddEntry(5, 31);
-            Magic2.AddEntry(6, 23);
-            Magic2.AddEntry(11, 6);
+            var magic2 = new RandomBag<int>((0, 10), (1, 10), (4, 20), (5, 31), (6, 23), (11, 6));
 
-            MagicPool = Magic2;
+            MagicPool = magic2;
             Lvl2Instantiated = true;
           }
 
@@ -133,15 +122,9 @@ namespace Castle_Fayyt
         case 3:
           if (Lvl3Instantiated == false)
           {
-            RandomAttackPool<int> Magic3 = new RandomAttackPool<int>();
-            Magic3.AddEntry(0, 10);
-            Magic3.AddEntry(1, 10);
-            Magic3.AddEntry(6, 22);
-            Magic3.AddEntry(7, 30);
-            Magic3.AddEntry(8, 21);
-            Magic3.AddEntry(15, 7);
+            var magic3 = new RandomBag<int>((0, 10), (1, 10), (6, 22), (7, 30), (8, 21), (15, 7));
 
-            MagicPool = Magic3;
+            MagicPool = magic3;
             Lvl3Instantiated = true;
           }
 
@@ -188,15 +171,9 @@ namespace Castle_Fayyt
         case 4:
           if (Lvl4Instantiated == false)
           {
-            RandomAttackPool<int> Magic4 = new RandomAttackPool<int>();
-            Magic4.AddEntry(0, 10);
-            Magic4.AddEntry(1, 10);
-            Magic4.AddEntry(8, 21);
-            Magic4.AddEntry(9, 30);
-            Magic4.AddEntry(10, 22);
-            Magic4.AddEntry(19, 7);
+            var magic4 = new RandomBag<int>((0, 10), (1, 10), (8, 21), (9, 30), (10, 22), (19, 7));
 
-            MagicPool = Magic4;
+            MagicPool = magic4;
             Lvl4Instantiated = true;
           }
 
@@ -243,15 +220,9 @@ namespace Castle_Fayyt
         case 5:
           if (Lvl5Instantiated == false)
           {
-            RandomAttackPool<int> Magic5 = new RandomAttackPool<int>();
-            Magic5.AddEntry(0, 10);
-            Magic5.AddEntry(1, 10);
-            Magic5.AddEntry(10, 20);
-            Magic5.AddEntry(11, 31);
-            Magic5.AddEntry(12, 21);
-            Magic5.AddEntry(22, 8);
+            var magic5 = new RandomBag<int>((0, 10), (1, 10), (10, 20), (11, 31), (12, 21), (22, 8));
 
-            MagicPool = Magic5;
+            MagicPool = magic5;
             Lvl5Instantiated = true;
           }
 
@@ -298,15 +269,9 @@ namespace Castle_Fayyt
         case 6:
           if (Lvl6Instantiated == false)
           {
-            RandomAttackPool<int> Magic6 = new RandomAttackPool<int>();
-            Magic6.AddEntry(0, 10);
-            Magic6.AddEntry(1, 10);
-            Magic6.AddEntry(12, 21);
-            Magic6.AddEntry(13, 32);
-            Magic6.AddEntry(14, 18);
-            Magic6.AddEntry(24, 9);
+            var magic6 = new RandomBag<int>((0, 10), (1, 10), (12, 21), (13, 32), (14, 18), (24, 9));
 
-            MagicPool = Magic6;
+            MagicPool = magic6;
             Lvl6Instantiated = true;
           }
 
@@ -353,16 +318,9 @@ namespace Castle_Fayyt
         case 7:
           if (Lvl7Instantiated == false)
           {
-            RandomAttackPool<int> Magic7 = new RandomAttackPool<int>();
-            Magic7.AddEntry(0, 10);
-            Magic7.AddEntry(1, 10);
-            Magic7.AddEntry(15, 16);
-            Magic7.AddEntry(16, 20);
-            Magic7.AddEntry(17, 22);
-            Magic7.AddEntry(18, 12);
-            Magic7.AddEntry(28, 10);
+            var magic7 = new RandomBag<int>((0, 10), (1, 10), (15, 16), (16, 20), (17, 22), (18, 12), (28, 10));
 
-            MagicPool = Magic7;
+            MagicPool = magic7;
             Lvl7Instantiated = true;
           }
 
@@ -409,14 +367,7 @@ namespace Castle_Fayyt
         case 8:
           if (Lvl8Instantiated == false)
           {
-            RandomAttackPool<int> Magic8 = new RandomAttackPool<int>();
-            Magic8.AddEntry(0, 10);
-            Magic8.AddEntry(1, 10);
-            Magic8.AddEntry(17, 16);
-            Magic8.AddEntry(18, 18);
-            Magic8.AddEntry(19, 22);
-            Magic8.AddEntry(20, 13);
-            Magic8.AddEntry(30, 11);
+            var Magic8 = new RandomBag<int>((0, 10), (1, 10), (17, 16), (18, 18), (19, 22), (20, 13), (30, 11));
 
             MagicPool = Magic8;
             Lvl8Instantiated = true;
@@ -465,18 +416,9 @@ namespace Castle_Fayyt
         case 9:
           if (Lvl9Instantiated == false)
           {
-            RandomAttackPool<int> Magic9 = new RandomAttackPool<int>();
-            Magic9.AddEntry(0, 10);
-            Magic9.AddEntry(1, 9);
-            Magic9.AddEntry(19, 6);
-            Magic9.AddEntry(20, 8);
-            Magic9.AddEntry(21, 14);
-            Magic9.AddEntry(22, 22);
-            Magic9.AddEntry(23, 10);
-            Magic9.AddEntry(24, 9);
-            Magic9.AddEntry(34, 12);
+            var magic9 = new RandomBag<int>((0, 10), (1, 9), (19, 6), (20, 8), (21, 14), (22, 22), (23, 10), (24, 9), (34, 12));
 
-            MagicPool = Magic9;
+            MagicPool = magic9;
             Lvl9Instantiated = true;
           }
 
@@ -523,19 +465,9 @@ namespace Castle_Fayyt
         case 10:
           if (Lvl10Instantiated == false)
           {
-            RandomAttackPool<int> Magic10 = new RandomAttackPool<int>();
-            Magic10.AddEntry(0, 10);
-            Magic10.AddEntry(1, 8);
-            Magic10.AddEntry(21, 6);
-            Magic10.AddEntry(22, 6);
-            Magic10.AddEntry(23, 8);
-            Magic10.AddEntry(24, 12);
-            Magic10.AddEntry(25, 18);
-            Magic10.AddEntry(26, 10);
-            Magic10.AddEntry(27, 8);
-            Magic10.AddEntry(38, 14);
+            var magic10 = new RandomBag<int>((0, 10), (1, 8), (21, 6), (22, 6), (23, 8), (24, 12), (25, 18), (26, 10), (27, 8), (38, 14));
 
-            MagicPool = Magic10;
+            MagicPool = magic10;
             Lvl10Instantiated = true;
           }
 
