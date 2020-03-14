@@ -2,7 +2,7 @@
 
 namespace Castle_Fayyt
 {
-  class Actions
+  internal class Actions
   {
     public static string ChooseFirst()
     {
@@ -25,6 +25,7 @@ namespace Castle_Fayyt
       choice = choice.ToLower();
       return choice;
     }
+
     public static string Observe()
     {
       Random observing = new Random();
@@ -43,7 +44,6 @@ namespace Castle_Fayyt
         string choice = ChooseNow();
         return choice;
       }
-
       else if (choose == 2)
       {
         Console.Write("\n" +
@@ -56,7 +56,6 @@ namespace Castle_Fayyt
         string choice = ChooseNow();
         return choice;
       }
-
       else
       {
         Console.Write("\n" +
@@ -87,7 +86,6 @@ namespace Castle_Fayyt
         string choice = ChooseNow();
         return choice;
       }
-
       else if (choose == 2)
       {
         Console.Write("\n" +
@@ -101,7 +99,6 @@ namespace Castle_Fayyt
         string choice = ChooseNow();
         return choice;
       }
-
       else
       {
         Console.Write("\n" +
@@ -133,7 +130,6 @@ namespace Castle_Fayyt
         string choice = ChooseNow();
         return choice;
       }
-
       else if (choose == 2)
       {
         Console.Write("\n" +
@@ -145,7 +141,6 @@ namespace Castle_Fayyt
         string choice = ChooseNow();
         return choice;
       }
-
       else
       {
         Console.Write("\n" +
@@ -181,7 +176,6 @@ namespace Castle_Fayyt
         string choice = ChooseNow();
         return choice;
       }
-
       else if (choose == 2)
       {
         Console.Write("\n" +
@@ -196,7 +190,6 @@ namespace Castle_Fayyt
         string choice = ChooseNow();
         return choice;
       }
-
       else
       {
         Console.Write("\n" +
@@ -227,7 +220,6 @@ namespace Castle_Fayyt
         string choice = ChooseNow();
         return choice;
       }
-
       else if (choose == 2)
       {
         Console.ForegroundColor = ConsoleColor.Blue; Console.Write("\n\t\"What are we?\"\n");
@@ -241,7 +233,6 @@ namespace Castle_Fayyt
         string choice = ChooseNow();
         return choice;
       }
-
       else if (choose == 3)
       {
         Console.Write("\n" +
@@ -254,7 +245,6 @@ namespace Castle_Fayyt
         string choice = ChooseNow();
         return choice;
       }
-
       else if (choose == 4)
       {
         Console.Write("\n" +
@@ -266,7 +256,6 @@ namespace Castle_Fayyt
         string choice = ChooseNow();
         return choice;
       }
-
       else if (choose == 5)
       {
         Console.Write("\n" +
@@ -280,7 +269,6 @@ namespace Castle_Fayyt
         string choice = ChooseNow();
         return choice;
       }
-
       else
       {
         Console.Write("\n" +
@@ -309,7 +297,6 @@ namespace Castle_Fayyt
         string choice = ChooseNow();
         return choice;
       }
-
       else if (choose == 2)
       {
         Console.Write("\n" +
@@ -322,7 +309,6 @@ namespace Castle_Fayyt
         string choice = ChooseNow();
         return choice;
       }
-
       else
       {
         Console.Write("\n" +
@@ -348,9 +334,9 @@ namespace Castle_Fayyt
           "every inch of the castle, you pull the delicate tendrils\n" +
           "of power required to heal your wounds.\n");
 
-        Console.Write("\nYou heal "); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(Heal.AtLvlHealing()); Console.ResetColor(); Console.Write(" hit points.");
+        Console.Write("\nYou heal "); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(HealLookup.GetHealValueFull(Fight.HeroLvl)); Console.ResetColor(); Console.Write(" hit points.");
 
-        Fight.HeroHP += Heal.AtLvlHealing();
+        Fight.HeroHP += HealLookup.GetHealValueFull(Fight.HeroLvl);
 
         if (Fight.HeroHP > Fight.HeroHPMax)
         {
@@ -361,7 +347,6 @@ namespace Castle_Fayyt
         string choice = ChooseNow();
         return choice;
       }
-
       else if (choose == 2)
       {
         Console.Write("\n" +
@@ -370,9 +355,9 @@ namespace Castle_Fayyt
           "barely remember training with.  You heedlessly plunge\n" +
           "forward molding the blackness to heal your wounds.\n");
 
-        Console.Write("\nYou heal "); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(Heal.AtLvlHealing()); Console.ResetColor(); Console.Write(" hit points.");
+        Console.Write("\nYou heal "); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(HealLookup.GetHealValueFull(Fight.HeroLvl)); Console.ResetColor(); Console.Write(" hit points.");
 
-        Fight.HeroHP += Heal.AtLvlHealing();
+        Fight.HeroHP += HealLookup.GetHealValueFull(Fight.HeroLvl);
 
         if (Fight.HeroHP > Fight.HeroHPMax)
         {
@@ -383,7 +368,6 @@ namespace Castle_Fayyt
         string choice = ChooseNow();
         return choice;
       }
-
       else
       {
         Console.Write("\n" +
@@ -392,9 +376,9 @@ namespace Castle_Fayyt
           "gratefully learned the delicate magic of self-restoration.\n" +
           "You apply it to yourself now.\n");
 
-        Console.Write("\nYou heal "); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(Heal.AtLvlHealing()); Console.ResetColor(); Console.Write(" hit points.");
+        Console.Write("\nYou heal "); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(HealLookup.GetHealValueFull(Fight.HeroLvl)); Console.ResetColor(); Console.Write(" hit points.");
 
-        Fight.HeroHP += Heal.AtLvlHealing();
+        Fight.HeroHP += HealLookup.GetHealValueFull(Fight.HeroLvl);
 
         if (Fight.HeroHP > Fight.HeroHPMax)
         {
@@ -420,7 +404,6 @@ namespace Castle_Fayyt
         string choice = ChooseNow();
         return choice;
       }
-
       else if (choose == 2)
       {
         Console.Write("\n" +
@@ -429,7 +412,6 @@ namespace Castle_Fayyt
         string choice = ChooseNow();
         return choice;
       }
-
       else
       {
         Console.Write("\n" +
@@ -455,7 +437,6 @@ namespace Castle_Fayyt
         string choice = ChooseNow();
         return choice;
       }
-
       else if (choose == 2)
       {
         Console.Write("\n" +
@@ -466,7 +447,6 @@ namespace Castle_Fayyt
         string choice = ChooseNow();
         return choice;
       }
-
       else
       {
         Console.Write("\n" +
@@ -496,7 +476,6 @@ namespace Castle_Fayyt
         string choice = ChooseNow();
         return choice;
       }
-
       else if (choose == 2)
       {
         Console.Write("\n" +
@@ -509,7 +488,6 @@ namespace Castle_Fayyt
         string choice = ChooseNow();
         return choice;
       }
-
       else
       {
         Console.Write("\n" +
